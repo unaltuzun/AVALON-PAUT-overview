@@ -1,25 +1,28 @@
 # AVALON-PAUT
 
-Handheld 32-channel phased-array ultrasonic inspection instrument.
+Handheld **64-channel phased-array ultrasonic inspection platform**.
 
-Built by **GODBRAIN Co.** — civilian industrial NDT v1, evolving to MIL-STD-810 v2 (2028) and space-tolerant v3 (2029-2030).
+Built by **GODBRAIN** — sovereign wave-physics + edge-AI hardware for safety-critical
+industries: **energy & nuclear · power turbines · aerospace & space · automotive & EV
+· semiconductors · heavy industry.**
 
 ## Status
 
-May 2026 · Phase 0 dev board in fabrication. 30+ commits in 22 days from concept to first fab order. Solo-founder execution.
+June 2026 · Phase 0 control board fabricated; 64-channel front-end (Phase 1b) in design.
+Solo-founder execution · tier-1 supply chain (TI, Würth Elektronik, NVIDIA).
 
 ## Architecture
 
-Four functional zones on a 24-layer rigid-flex mainboard, bridged by three flex regions:
+Four functional zones on a 24-layer rigid-flex mainboard, bridged by flex regions:
 
 | Zone | Function |
 |---|---|
-| Z1 | Optical & UI — camera, UV illumination, 5" IPS + touch |
-| Z2 | Control / DSP / FPGA — dual-MCU + FPGA beamformer + IMU + NFC + microSD |
-| Z3 | Power — 3S LiPo + BMS + USB-C PD + multi-rail PMIC + ±100V pulser supply |
-| Z4 | PAUT Front-End — 32-ch ±100V pulser + 32-ch AFE + LVDS + transducer ZIF |
+| Z1 | Optical & UI — camera, UV illumination, 10" sunlight-readable touchscreen |
+| Z2 | Control / Compute — dual-MCU + FPGA beamformer + NVIDIA Jetson edge-AI + sensors |
+| Z3 | Power — Li-ion + BMS + USB-C PD + multi-rail PMIC + ±100 V pulser supply |
+| Z4 | PAUT Front-End — 64-ch ±100 V three-level pulser + 64-ch receive AFE + transducer interface |
 
-Transducer: 32-element 5 MHz phased-array linear probe.
+Swappable phased-array probes (linear / matrix), application-dependent.
 
 Detail in [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -27,20 +30,20 @@ Detail in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 | Phase | Form factor | Target |
 |---|---|---|
-| Phase 0 — control dev board | 4L FR-4 | May 2026 (in fab) |
-| Phase 1a — Z1+Z2+Z3 integrated | 8-12L FR-4 | Q3 2026 |
-| Phase 1b — Z4 standalone | 8L FR-4 + PCBA | Q4 2026 |
-| Phase 2 — full 24L integration | 24L rigid-flex | Q1 2027 |
-| v2 — MIL-STD-810 / 461 | 24L rigid-flex | 2028 |
-| v3 — space-tolerant | 24L rigid-flex + rad-tolerant Si | 2029-2030 |
+| Phase 0 — control dev board | 4-layer | Fabricated (Jun 2026) |
+| Phase 1a — Z1+Z2+Z3 integration | multilayer | Q3 2026 |
+| Phase 1b — Z4 64-ch front-end | multilayer + PCBA | Q4 2026 |
+| Phase 2 — full 24-layer integration | 24-layer rigid-flex | Q1 2027 |
+| Ruggedized / extended-environment variant | 24-layer rigid-flex | 2028+ |
+| Aerospace / high-reliability variant | rad-tolerant | 2029+ |
 
 ## Principles
 
-**De-risk before commit** — Phase 1.5 split validates integration + BGA process on intermediate boards before production rigid-flex.
+**De-risk before commit** — intermediate boards validate integration and BGA process before production rigid-flex.
 
-**Capability first** — engineering rigor and supplier ecosystem are the primary deliverables; commercial revenue is downstream.
+**Capability first** — engineering rigor and a real supplier ecosystem are the primary deliverables.
 
-**Dual-use sovereignty** — civilian NDT and defense infrastructure inspection share the same silicon stack. Indigenously built, ITAR-free, Wassenaar Cat 6.
+**Sovereign hardware** — indigenously designed and built; one wave-physics + edge-AI stack across all target sectors.
 
 ## Contact
 
